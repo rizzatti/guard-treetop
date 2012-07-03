@@ -1,12 +1,12 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/guard-treetop/version', __FILE__)
+require File.expand_path("../lib/guard-treetop/version", __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors       = ["Zeh Rizzatti"]
   gem.email         = ["zehrizzatti@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{Guard::Treetop automatically compiles your treetops grammars}
+  gem.summary       = %q{Guard gem for Treetop}
+  gem.homepage      = "http://rubygems.org/gems/guard-treetop"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
@@ -14,4 +14,9 @@ Gem::Specification.new do |gem|
   gem.name          = "guard-treetop"
   gem.require_paths = ["lib"]
   gem.version       = Guard::Treetop::VERSION
+
+  gem.add_dependency "guard", "~> 1.2"
+  gem.add_dependency "treetop", "~> 1.4.0"
+  gem.add_development_dependency "bundler", "~> 1.0"
+  gem.add_development_dependency "rspec", "~> 2.10"
 end
