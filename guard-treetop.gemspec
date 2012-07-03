@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path("../lib/guard-treetop/version", __FILE__)
+require File.expand_path("../lib/guard/treetop/version", __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors       = ["Zeh Rizzatti"]
@@ -13,10 +13,12 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "guard-treetop"
   gem.require_paths = ["lib"]
-  gem.version       = Guard::Treetop::VERSION
+  gem.version       = Guard::TreetopVersion::VERSION
+  gem.platform      = Gem::Platform::RUBY
 
   gem.add_dependency "guard", "~> 1.2"
   gem.add_dependency "treetop", "~> 1.4.0"
-  gem.add_development_dependency "bundler", "~> 1.0"
-  gem.add_development_dependency "rspec", "~> 2.10"
+  gem.add_development_dependency "bundler"
+  gem.add_development_dependency "guard-rspec"
+  gem.add_development_dependency "rspec"
 end
