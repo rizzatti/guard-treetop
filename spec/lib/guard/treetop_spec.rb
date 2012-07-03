@@ -27,15 +27,23 @@ describe Guard::Treetop do
     end
 
     context "with :input provided" do
+      let(:guard) { Guard::Treetop.new(nil, {:input => "lib"}) }
+
+      it "removes the provided :input" do
+        guard.options[:input].should be_nil
+      end
+
+      it "has one watcher" do
+        guard.should have(1).watchers
+      end
+
+      it "watchers *.treetop and *.tt files" do
+        guard.watchers.first.pattern.should == %r{lib/(.+)(\.treetop|\.tt)}
+      end
+
       context "and no :output provided" do
-        let(:guard) { Guard::Treetop.new(nil, {:input => "lib"}) }
-
-        it "sets the provided :input" do
-          guard.options[:input].should == "lib"
-        end
-
         it "outputs to the same directory as input" do
-          guard.options[:output].should == guard.options[:input]
+          guard.options[:output].should == "lib"
         end
       end
 
@@ -44,10 +52,6 @@ describe Guard::Treetop do
           {:input => "lib/inputs", :output => "lib/outputs"}
         end
         let(:guard) { Guard::Treetop.new(nil, options) }
-
-        it "respects the provided :input" do
-          guard.options[:input].should == "lib/inputs"
-        end
 
         it "respects the provided :output" do
           guard.options[:output].should == "lib/outputs"

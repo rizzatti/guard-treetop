@@ -9,10 +9,13 @@ module Guard
     }
 
     def initialize(watchers=[], options={})
+      watchers ||= []
       defaults = DEFAULT_OPTIONS.clone
 
       if options[:input]
-        defaults.merge!({:output => options[:input]})
+        input = options.delete(:input)
+        defaults.merge!({:output => input})
+        watchers << ::Guard::Watcher.new(%r{#{input}/(.+)(\.treetop|\.tt)})
       end
 
       super(watchers, defaults.merge!(options))
