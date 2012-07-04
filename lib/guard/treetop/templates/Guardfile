@@ -1,0 +1,1 @@
+guard "treetop", :input => "grammars", :output => "lib/parsers"

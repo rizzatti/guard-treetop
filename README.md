@@ -37,7 +37,7 @@ $ bundle exec guard init treetop
                               # Will compile .tt and .treetop files inside
                               # default: nil
 
-:output => 'lib/grammar'      # Relative path to the root directory.
+:output => 'lib/parsers'      # Relative path to the root directory.
                               # default: the same as :input
 ```
 
