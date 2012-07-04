@@ -4,13 +4,12 @@ require File.expand_path("../lib/guard/treetop/version", __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Zeh Rizzatti"]
   gem.email         = ["zehrizzatti@gmail.com"]
-  gem.description   = %q{Guard::Treetop automatically compiles your treetops grammars}
+  gem.description   = %q{Guard::Treetop automatically compiles your treetop grammars}
   gem.summary       = %q{Guard gem for Treetop}
   gem.homepage      = "http://rubygems.org/gems/guard-treetop"
 
-  gem.files         = `git ls-files`.split($\)
-  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
-  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
+  gem.files         = Dir['lib/**/*']
+  gem.test_files    = Dir['spec/**/*.rb']
   gem.name          = "guard-treetop"
   gem.require_paths = ["lib"]
   gem.version       = Guard::TreetopVersion::VERSION
