@@ -1,24 +1,45 @@
 # Guard::Treetop
 
-TODO: Write a gem description
+Guard::Treetop compiles your treetop grammars to ruby files.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'guard-treetop'
+```ruby
+group :development do
+  gem 'guard-treetop'
+end
+```
 
 And then execute:
 
-    $ bundle
+```bash
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install guard-treetop
+```bash
+$ gem install guard-treetop
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+```bash
+$ bundle exec guard init treetop
+```
+
+## Options
+
+```ruby
+:input => 'grammars'          # Relative path to the root directory.
+                              # Will compile .tt and .treetop files inside
+                              # default: nil
+
+:output => 'lib/grammar'      # Relative path to the root directory.
+                              # default: the same as :input
+```
 
 ## Contributing
 
