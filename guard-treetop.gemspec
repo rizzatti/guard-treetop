@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Guard gem for Treetop}
   gem.homepage      = "http://rubygems.org/gems/guard-treetop"
 
-  gem.files         = Dir['lib/**/*']
+  gem.files         = Dir['lib/**/*'] << 'README.md' << 'LICENSE'
   gem.test_files    = Dir['spec/**/*.rb']
   gem.name          = "guard-treetop"
   gem.require_paths = ["lib"]
