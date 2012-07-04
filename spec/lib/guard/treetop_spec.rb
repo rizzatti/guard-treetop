@@ -59,4 +59,28 @@ describe Guard::Treetop do
       end
     end
   end
+
+  describe "running" do
+    let(:guard) { Guard::Treetop.new(nil, :input => "spec/fixtures") }
+    let(:inputs) { ["spec/fixtures/1.tt", "spec/fixtures/2.treetop"] }
+    let(:outputs) { ["spec/fixtures/1.rb", "spec/fixtures/2.rb"] }
+
+    before(:all) { Dir.stub(:glob).and_return(inputs) }
+
+    it "should call run_on_changes" do
+      guard.should_receive(:run_on_changes).with(inputs)
+      guard.run_all
+    end
+
+    it "calls run_on_changes" do
+      files = [inputs, outputs].transpose
+      guard.compiler.should_receive(:compile).with(*files.first)
+      guard.compiler.should_receive(:compile).with(*files.last)
+      guard.run_on_changes(inputs)
+    end
+
+    it "throws :task_has_failed on error" do
+      expect { guard.run_on_changes(["/tmp/non_existent"]) }.to throw_symbol :task_has_failed
+    end
+  end
 end
