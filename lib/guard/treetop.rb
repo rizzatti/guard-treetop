@@ -31,9 +31,14 @@ module Guard
     end
 
     def run_on_changes(paths)
-      tuples = paths.map { |e| [e, e.gsub(/(tt|treetop)\z/, 'rb')] }
+      tuples = paths.map do |path|
+        basename = File.basename(path).gsub(/\.(tt|treetop)\z/, '.rb')
+        dirname = options[:output] || File.dirname(path)
+        output = File.join(dirname, basename)
+        [path, output]
+      end
       tuples.each { |e| compiler.compile(*e) }
-    rescue RuntimeError
+    rescue StandardError
       throw :task_has_failed
     end
   end
