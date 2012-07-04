@@ -26,6 +26,10 @@ module Guard
       @compiler = ::Treetop::Compiler::GrammarCompiler.new
     end
 
+    def start
+      run_all if options[:all_on_start]
+    end
+
     def run_all
       run_on_changes(Watcher.match_files(self, Dir.glob("**/*.{tt,treetop}")))
     end

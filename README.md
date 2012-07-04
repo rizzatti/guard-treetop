@@ -39,6 +39,9 @@ $ bundle exec guard init treetop
 
 :output => 'lib/parsers'      # Relative path to the root directory.
                               # default: the same as :input
+
+:all_on_start => false        # Run compilation when guard starts
+                              # default: false
 ```
 
 ## Contributing

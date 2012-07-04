@@ -60,7 +60,27 @@ describe Guard::Treetop do
     end
   end
 
-  describe "running without output" do
+  describe "#start" do
+    context "without all_on_start" do
+      let(:guard) { Guard::Treetop.new }
+
+      it "should not call run_all" do
+        guard.should_not_receive(:run_all)
+        guard.start
+      end
+    end
+
+    context "with all_on_start" do
+      let(:guard) { Guard::Treetop.new(nil, :all_on_start => true) }
+
+      it "should call run_all" do
+        guard.should_receive(:run_all)
+        guard.start
+      end
+    end
+  end
+
+  context "running without output" do
     let(:guard) { Guard::Treetop.new(nil, :input => "inputs") }
     let(:inputs) { ["inputs/1.tt", "inputs/2.treetop"] }
     let(:outputs) { ["inputs/1.rb", "inputs/2.rb"] }
@@ -83,7 +103,7 @@ describe Guard::Treetop do
     end
   end
 
-  describe "running with output" do
+  context "running with output" do
     let(:guard) { Guard::Treetop.new(nil, :input => "inputs", :output => "outputs") }
     let(:inputs) { ["inputs/1.tt", "inputs/2.treetop"] }
     let(:outputs) { ["outputs/1.rb", "outputs/2.rb"] }
