@@ -1,2 +1,2 @@
-require "rspec"
-require "guard/treetop"
+require 'rubygems' unless defined? Gem
+require 'rspec'

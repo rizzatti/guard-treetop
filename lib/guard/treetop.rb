@@ -1,7 +1,6 @@
-require "guard"
-require "guard/guard"
-require "guard/treetop/version"
-require "treetop"
+require 'guard'
+require 'guard/guard'
+require 'treetop'
 
 module Guard
   class Treetop < Guard
@@ -31,7 +30,7 @@ module Guard
     end
 
     def run_all
-      run_on_changes(Watcher.match_files(self, Dir.glob("**/*.{tt,treetop}")))
+      run_on_changes(Watcher.match_files(self, Dir.glob('**/*.{tt,treetop}')))
     end
 
     def run_on_changes(paths)
