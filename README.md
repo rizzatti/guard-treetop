@@ -1,6 +1,6 @@
-# Guard::Treetop
+# Guard::Treetop [![Build Status][build-status]][travis]
 
-Guard::Treetop compiles your treetop grammars to ruby files.
+Guard::Treetop compiles your treetop grammars to ruby files using guard.
 
 ## Installation
 
@@ -30,6 +30,8 @@ $ gem install guard-treetop
 $ bundle exec guard init treetop
 ```
 
+And edit your `Guardfile`.
+
 ## Options
 
 ```ruby
@@ -51,3 +53,6 @@ $ bundle exec guard init treetop
 3. Commit your changes (`git commit -am 'Added some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+[build-status]: https://travis-ci.org/zehrizzatti/guard-treetop.png
+[travis]: https://travis-ci.org/zehrizzatti/guard-treetop
