@@ -1,9 +1,12 @@
 require 'guard'
 require 'guard/guard'
+require 'guard/treetop/version'
 require 'treetop'
 
 module Guard
   class Treetop < Guard
+    include TreetopVersion
+
     DEFAULT_OPTIONS = {
       :all_on_start => false
     }
