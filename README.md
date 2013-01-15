@@ -1,4 +1,7 @@
-# Guard::Treetop [![Build Status][build-status]][travis]
+# Guard::Treetop
+[![Build Status][travis-badge]][travis-site]
+[![Dependency Status][gemnasium-badge]][gemnasium-site]
+[![Code Climate][cc-badge]][cc-site]
 
 Guard::Treetop compiles your treetop grammars to ruby files using guard.
 
@@ -54,5 +57,9 @@ And edit your `Guardfile`.
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
-[build-status]: https://travis-ci.org/zehrizzatti/guard-treetop.png
-[travis]: https://travis-ci.org/zehrizzatti/guard-treetop
+[cc-badge]: https://codeclimate.com/badge.png
+[cc-site]: https://codeclimate.com/github/zehrizzatti/guard-treetop
+[gemnasium-badge]: https://gemnasium.com/zehrizzatti/guard-treetop.png
+[gemnasium-site]: https://gemnasium.com/zehrizzatti/guard-treetop
+[travis-badge]: https://travis-ci.org/zehrizzatti/guard-treetop.png
+[travis-site]: https://travis-ci.org/zehrizzatti/guard-treetop
