@@ -1,9 +1,10 @@
 # Guard::Treetop
+
+Guard::Treetop compiles your treetop grammars to ruby files using guard.
+
 [![Build Status][travis-badge]][travis-site]
 [![Dependency Status][gemnasium-badge]][gemnasium-site]
 [![Code Climate][cc-badge]][cc-site]
-
-Guard::Treetop compiles your treetop grammars to ruby files using guard.
 
 ## Installation
 
