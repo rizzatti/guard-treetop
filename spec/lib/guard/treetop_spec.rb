@@ -88,7 +88,7 @@ module Guard
       subject { Treetop.new(nil, :input => 'inputs') }
       let(:inputs) { ['inputs/1.tt', 'inputs/2.treetop'] }
       let(:outputs) { ['inputs/1.rb', 'inputs/2.rb'] }
-      before(:all) { Dir.stub(:glob).and_return(inputs) }
+      before(:each) { Dir.stub(:glob).and_return(inputs) }
 
       it 'should call run_on_changes' do
         subject.should_receive(:run_on_changes).with(inputs)
@@ -111,7 +111,7 @@ module Guard
       subject { Treetop.new(nil, :input => 'inputs', :output => 'outputs') }
       let(:inputs) { ['inputs/1.tt', 'inputs/2.treetop'] }
       let(:outputs) { ['outputs/1.rb', 'outputs/2.rb'] }
-      before(:all) { Dir.stub(:glob).and_return(inputs) }
+      before(:each) { Dir.stub(:glob).and_return(inputs) }
 
       it 'calls run_on_changes' do
         files = [inputs, outputs].transpose
