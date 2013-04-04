@@ -59,8 +59,8 @@ And edit your `Guardfile`.
 5. Create new Pull Request
 
 [cc-badge]: https://codeclimate.com/badge.png
-[cc-site]: https://codeclimate.com/github/zehrizzatti/guard-treetop
-[gemnasium-badge]: https://gemnasium.com/zehrizzatti/guard-treetop.png
-[gemnasium-site]: https://gemnasium.com/zehrizzatti/guard-treetop
-[travis-badge]: https://travis-ci.org/zehrizzatti/guard-treetop.png
-[travis-site]: https://travis-ci.org/zehrizzatti/guard-treetop
+[cc-site]: https://codeclimate.com/github/rizzatti/guard-treetop
+[gemnasium-badge]: https://gemnasium.com/rizzatti/guard-treetop.png
+[gemnasium-site]: https://gemnasium.com/rizzatti/guard-treetop
+[travis-badge]: https://travis-ci.org/rizzatti/guard-treetop.png
+[travis-site]: https://travis-ci.org/rizzatti/guard-treetop
