@@ -1,10 +1,12 @@
 # Guard::Treetop
 
-Guard::Treetop compiles your treetop grammars to ruby files using guard.
-
 [![Build Status][travis-badge]][travis-site]
 [![Dependency Status][gemnasium-badge]][gemnasium-site]
 [![Code Climate][cc-badge]][cc-site]
+
+Compiles your treetop grammars to ruby files using [guard][guard].
+
+Tested under MRI 1.8, 1.9 and 2.0, JRuby and Rubinius.
 
 ## Installation
 
@@ -22,7 +24,7 @@ And then execute:
 $ bundle
 ```
 
-Or install it yourself as:
+Or install it yourself:
 
 ```bash
 $ gem install guard-treetop
@@ -62,5 +64,6 @@ And edit your `Guardfile`.
 [cc-site]: https://codeclimate.com/github/rizzatti/guard-treetop
 [gemnasium-badge]: https://gemnasium.com/rizzatti/guard-treetop.png
 [gemnasium-site]: https://gemnasium.com/rizzatti/guard-treetop
+[guard]: https://github.com/guard/guard
 [travis-badge]: https://travis-ci.org/rizzatti/guard-treetop.png
 [travis-site]: https://travis-ci.org/rizzatti/guard-treetop
