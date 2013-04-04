@@ -1,5 +1,6 @@
 # Guard::Treetop
 
+[![Gem Version](badge-fury-image)](badge-fury-site)
 [![Build Status][travis-badge]][travis-site]
 [![Dependency Status][gemnasium-badge]][gemnasium-site]
 [![Code Climate][cc-badge]][cc-site]
@@ -60,6 +61,8 @@ And edit your `Guardfile`.
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
+[badge-fury-image]: https://badge.fury.io/rb/guard-treetop.png
+[badge-fury-site]: http://badge.fury.io/rb/guard-treetop
 [cc-badge]: https://codeclimate.com/badge.png
 [cc-site]: https://codeclimate.com/github/rizzatti/guard-treetop
 [gemnasium-badge]: https://gemnasium.com/rizzatti/guard-treetop.png
