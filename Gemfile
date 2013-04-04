@@ -7,9 +7,9 @@ group :development do
   gem 'pry'
   gem 'travis-lint'
   gem 'rb-inotify', '~> 0.8.8' if RUBY_PLATFORM =~ /linux/
+  gem 'guard-rspec'
 end
 
 group :test do
-  gem 'guard-rspec'
   gem 'rake'
 end
