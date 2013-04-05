@@ -64,7 +64,7 @@ And edit your `Guardfile`.
 
 [badge-fury-badge]: https://badge.fury.io/rb/guard-treetop.png
 [badge-fury-site]: http://badge.fury.io/rb/guard-treetop
-[cc-badge]: https://codeclimate.com/badge.png
+[cc-badge]: https://codeclimate.com/github/rizzatti/guard-treetop.png
 [cc-site]: https://codeclimate.com/github/rizzatti/guard-treetop
 [coveralls-badge]: https://coveralls.io/repos/rizzatti/guard-treetop/badge.png?branch=master
 [coveralls-site]: https://coveralls.io/r/rizzatti/guard-treetop
